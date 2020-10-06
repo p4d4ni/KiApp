@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonGrad = findViewById(R.id.buttonGluecksrad);
 
         final Intent maps = new Intent(this,  MapsActivity.class);
-        final Intent grad = new Intent(this,  Gluecksrad.class);
+        final Intent grad = new Intent(this,  GradActivity.class);
         buttonMap.setOnClickListener(new View.OnClickListener()    {
             @Override
             public void onClick(View arg0) {
