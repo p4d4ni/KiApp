@@ -12,10 +12,10 @@ import android.widget.ImageView;
 
 import java.util.Random;
 
-public class Gluecksrad extends AppCompatActivity {
+public class GradActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_gluecksrad);
 
         final ImageView myView = (ImageView)findViewById(R.id.glueck);
         final Animation rotation = AnimationUtils.loadAnimation(this, R.anim.rotation);
