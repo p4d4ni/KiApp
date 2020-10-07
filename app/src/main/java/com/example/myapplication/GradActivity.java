@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -18,12 +19,28 @@ public class GradActivity extends AppCompatActivity {
     Random generator = new Random();
     float degreeOld = 0;
     float degree = 0;
+
+
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gluecksrad);
 
+        //Button to go back to main menue
+        final ImageButton back =(ImageButton)findViewById(R.id.back);
+        final Intent menue = new Intent(this,  MainActivity.class);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(menue);
+            }
+        });
+
+        //initializing picture and animation
         final ImageView myView = (ImageView)findViewById(R.id.glueck);
         final Animation rotation = AnimationUtils.loadAnimation(this, R.anim.rotation);
+
         rotation.setRepeatCount(Animation.INFINITE);
         Button button = (Button)findViewById(R.id.Button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +55,7 @@ public class GradActivity extends AppCompatActivity {
     public void spin(View v){
         degreeOld = degree % 360;
         // we calculate random angle for rotation of our wheel
-        degree = generator.nextInt(360) + 720;
+        degree = generator.nextInt(720) + 1080;
         // rotation effect on the center of the wheel
         RotateAnimation rotateAnim = new RotateAnimation(degreeOld, degree,
                 RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f);
