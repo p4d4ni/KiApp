@@ -1,31 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity2">
+
+
+    <Button
+        android:id="@+id/buttonTur"
+        android:layout_width="108dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:background="#00f2ff"
+        android:text="Turquise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toEndOf="@+id/buttonRot"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGelb" />
+
+    <Button
+        android:id="@+id/buttonPink"
+        android:layout_width="108dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="24dp"
+        android:background="#ff00d4"
+        android:text="Pink"
+        app:layout_constraintStart_toEndOf="@+id/buttonGrün"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTur" />
+
+    <Button
+        android:id="@+id/buttonGrün"
+        android:layout_width="108dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="24dp"
+        android:background="#00ff22"
+        android:text="Grün"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRot" />
+
+    <Button
+        android:id="@+id/buttonBlau"
+        android:layout_width="108dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:background="#0004ff"
+        android:text="Blau"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPink"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGrün" />
+
+    <TextView
+        android:id="@+id/Farben"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Farben"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/buttonGelb"
+        android:layout_width="108dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="56dp"
+        android:background="#eeff00"
+        android:text="Gelb"
+        app:layout_constraintStart_toEndOf="@+id/buttonGrün"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/buttonRot"
+        android:layout_width="108dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:background="#ff0000"
+        android:text="Rot"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGelb"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Markername"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.978" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/BackButton"
+        style="@android:style/Widget.DeviceDefault.Light.ImageButton"
         android:layout_width="56dp"
         android:layout_height="61dp"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="4dp"
         android:background="#FFFFFF"
+        android:contentDescription="@string/previous"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/homeAsUpIndicator" />
+        app:srcCompat="?attr/homeAsUpIndicator"
+        tools:visibility="visible" />
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView2"
-        android:layout_width="396dp"
-        android:layout_height="679dp"
-        android:layout_marginTop="21dp"
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="206dp"
+        android:layout_height="64dp"
+        android:background="#CCCCCC"
+        android:ems="10"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326"></EditText>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
